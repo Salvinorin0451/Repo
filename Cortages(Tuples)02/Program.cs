@@ -20,7 +20,7 @@ namespace Cortages_Tuples_02
 
             Console.WriteLine(Method());
             Console.WriteLine(Method().Item1);
-
+                                                         //1231123
             Console.WriteLine("Hello World!");
 
             //Использование отбрасывания с кортежами
