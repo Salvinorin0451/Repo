@@ -50,7 +50,7 @@ namespace GenericsCollection01
     {
         static void Main(string[] args)
         {
-            List<Person> people = new List<Person>()
+            /*List<Person> people = new List<Person>()
             {
                 new Person {Name = "Homer", LastName ="Simpson", Age = 47},
                 new Person {Name = "Fry", LastName = "Unknows", Age = 25},
@@ -66,7 +66,16 @@ namespace GenericsCollection01
             {
                 Console.WriteLine(person.Name + " " + person.LastName);
             }
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Hello World!");   */
+
+            PP<int> pP1 = new PP<int>(5);
+            pP1.ShowMe();
+            PP<string> pP2 = new PP<string>("this is string");
+            pP2.ShowMe();
+            PP<Person> pP3 = new PP<Person>(new Person());
+            pP3.ShowMe();
+
+            
         }
     }
 
@@ -75,5 +84,20 @@ namespace GenericsCollection01
         public string Name { get; set; }
         public int Age { get; set; }
         public string LastName { get; set; }
+    }
+
+    class PP<T>
+    {
+        public T Name;
+        public void ShowMe()
+        {
+            Console.WriteLine(Name.ToString());
+        }
+
+        public PP(T arg)
+        {
+            Name = arg;
+        }
+          
     }
 }
