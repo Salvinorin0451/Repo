@@ -7,6 +7,7 @@ namespace DelegateAction01
         static void Main(string[] args)
         {
             Action<string, ConsoleColor, int> actionTarget = new Action<string, ConsoleColor, int>(DisplayMessage);
+            
 
             actionTarget("Action Message", ConsoleColor.Yellow, 5);
         }
@@ -23,5 +24,10 @@ namespace DelegateAction01
 
             Console.ForegroundColor = previous;
         }
+    }
+
+    class Generics<T>
+    {
+        public void ShowMe()
     }
 }

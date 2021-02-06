@@ -8,7 +8,7 @@ namespace Delegate05
         {
             Car c1 = new Car("SlugBug", 100, 10);
 
-            c1.RegisterWithCarEngine(new Car.CarEngineHandler(OnCarEngineEvent));
+            c1.RegisterWithCarEngine(OnCarEngineEvent);
             for (int i = 0; i < 6; i++)
                 c1.Accelerate(20);
 
@@ -17,6 +17,11 @@ namespace Delegate05
         private static void OnCarEngineEvent(string msgForCaller)
         {
             Console.WriteLine(msgForCaller);
+        }
+
+        public static int OnOnON()
+        {
+            return 4;
         }
     }
 

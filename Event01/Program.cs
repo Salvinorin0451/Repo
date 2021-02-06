@@ -46,8 +46,7 @@ namespace Event01
                 listHandlers("Sorry");
             if(carIsDead)
             {
-                if (Exploded != null)
-                    Exploded("Sorry");
+              
             }
             else
             {
